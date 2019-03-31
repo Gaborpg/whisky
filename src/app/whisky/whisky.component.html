@@ -1,0 +1,11 @@
+
+<form [formGroup]="whiskyForm">
+<app-multi-select [selectItems]="whiskys" formControlName="whisky"></app-multi-select>
+</form>
+{{whiskyForm.value | json}}
+
+<p><strong>ID:</strong>{{whiskys[0].id}}</p>
+<p><strong>Name:</strong>{{whiskys[0].name}}</p>
+<ng-container *ngIf="iDs;">
+  <ng-container *ngFor="let iD of iDs">{{iD}}</ng-container>
+</ng-container>

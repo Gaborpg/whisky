@@ -1,0 +1,6 @@
+<select (change)="onMultiChange($event.target.value)">
+  <ng-container *ngFor="let selectItem of selectItems">
+    <option [value]="selectItem.id">{{selectItem.name}}</option>
+  </ng-container>
+</select>
+
